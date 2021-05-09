@@ -1,5 +1,9 @@
 #include <GLFW/glfw3.h>
-
+/// <summary>
+/// Initial test phase.
+/// </summary>
+/// <param name=""></param>
+/// <returns></returns>
 int main(void)
 {
     GLFWwindow* window;
