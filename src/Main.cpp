@@ -76,8 +76,9 @@ int main()
 			prev_time = time; // Resets prev_time to current time		
 		}
 		// Use of trigonometry to nicely change colors
+		// Radians not degrees
 		glClearColor(float(sin(angle)), float(cos(angle)), float(tan(angle)), 1.0f);
-		// Basic needed functions for chamges to be visible
+		// Basic needed functions for changes to be visible
 		glClear(GL_COLOR_BUFFER_BIT);
 		glfwSwapBuffers(window);
 		// Take care of all the GLFW events
