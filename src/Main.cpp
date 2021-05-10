@@ -63,16 +63,25 @@ int main()
 	// Swap the back buffer with the front buffer
 	glfwSwapBuffers(window);
 
+	// After Exercise 3.1
+	float prev_time = float(glfwGetTime()); // Keeps track of the time
+	float angle = 0.0f; // Will control the color
 	// Main while loop
 	while (!glfwWindowShouldClose(window))
 	{
+		float time = float(glfwGetTime());
+		if (time - prev_time >= 0.1f) // Every 0.1 seconds it's True
+		{
+			angle += 0.1f; // Changes angle in order to change color
+			prev_time = time; // Resets prev_time to current time		
+		}
+		// Use of trigonometry to nicely change colors
+		glClearColor(float(sin(angle)), float(cos(angle)), float(tan(angle)), 1.0f);
+		// Basic needed functions for chamges to be visible
+		glClear(GL_COLOR_BUFFER_BIT);
+		glfwSwapBuffers(window);
 		// Take care of all the GLFW events
 		glfwPollEvents();
-		//std::cout << int(glfwGetTime()) << std::endl;
-
-		
-		//colorFlicker();
-		glfwSwapBuffers(window);
 	}
 
 	// Delete window before ending the program
