@@ -18,7 +18,13 @@ int main()
 
 	// Create a GLFWwindow object of 800 by 800 pixels, naming it "YouTubeOpenGL"
 	// Fourth argument is for full screen. Fith argument does not matter.
-	GLFWwindow* window = glfwCreateWindow(800, 800, "YouTubeOpenGL", NULL, NULL);
+
+
+	// Exercise Easy 2. Change the window size to x=400, y=225
+
+	//GLFWwindow* window = glfwCreateWindow(800, 800, "YouTubeOpenGL", NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(400, 225, "YouTubeOpenGL", NULL, NULL);
+
 	//Error check if the window fails to create
 	if (window == NULL)
 	{
@@ -34,8 +40,13 @@ int main()
 
 	// Specify the viewport of OpenGL in the Window
 	// In this case the viewport goes from x =0, y = 0, to x = 800, y = 800
-	// Bottom left to top right? I need to check this.
-	glViewport(0, 0, 800, 800);
+	// Bottom left to top right? Confirmed.
+
+
+	// Exercise Easy 2. Change the window size to x=400, y=225
+	//glViewport(0, 0, 800, 800);
+	glViewport(0, 0, 400, 225);
+
 
 	// Specify the color of the background
 	// Exercise Easy 1.
