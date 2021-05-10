@@ -21,10 +21,11 @@ int main()
 
 
 	// Exercise Easy 2. Change the window size to x=400, y=225
-
 	//GLFWwindow* window = glfwCreateWindow(800, 800, "YouTubeOpenGL", NULL, NULL);
-	GLFWwindow* window = glfwCreateWindow(400, 225, "YouTubeOpenGL", NULL, NULL);
-
+	//GLFWwindow* window = glfwCreateWindow(400, 225, "YouTubeOpenGL", NULL, NULL);
+	// Exercise Easy 3. Change the window title to "I made this!"
+	GLFWwindow* window = glfwCreateWindow(400, 225, "I made this!", NULL, NULL);
+	// 
 	//Error check if the window fails to create
 	if (window == NULL)
 	{
