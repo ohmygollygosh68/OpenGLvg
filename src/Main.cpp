@@ -2,19 +2,7 @@
 #include<glad/glad.h>
 #include<GLFW/glfw3.h>
 
-bool flick = true;
-void colorFlicker()
-{
-	if (flick == true )
-	{
-		glClearColor(0.811f, 0.517f, 0.047f, 1.0f);
-		flick = false;
-	}
-	else
-	{
-		glClearColor(0.07f, 0.13f, 0.17f, 1.0f);
-	}
-}
+
 int main()
 {
 	// Initialise GLFW
@@ -80,7 +68,10 @@ int main()
 	{
 		// Take care of all the GLFW events
 		glfwPollEvents();
-		colorFlicker();
+		//std::cout << int(glfwGetTime()) << std::endl;
+
+		
+		//colorFlicker();
 		glfwSwapBuffers(window);
 	}
 
